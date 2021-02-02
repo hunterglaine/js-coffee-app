@@ -43,3 +43,10 @@ $('.add-to-order').on('click', () => {
   addItemToCart('Coffee'); 
   incrementCartTotal(1.50);
 });
+
+
+$('#place-order').on('click', () => {
+  const newlySold = $('#cart-items').children().length;
+  incrementCoffeeSold(newlySold);
+  resetCart();
+});
